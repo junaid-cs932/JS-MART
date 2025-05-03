@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing - MyStore</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" style="height: 70px; ;" alt="JS MART Logo">
+                <span class="brand-text">JS MART</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Categories
+                         </a>
+                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
+                           <li><a class="dropdown-item" href="e.html">Electronics</a></li>
+                           <li><a class="dropdown-item" href="c.html">Clothing</a></li>
+                           <li><a class="dropdown-item" href="home.html">Home Goods</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                           <li><a class="dropdown-item" href="a.html">All Products</a></li>
+                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="d.html">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                 </ul>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex me-3 search-form-custom" role="search">
+                        <input class="form-control me-2 form-control-sm search-input-custom" type="search" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-custom-search btn-sm" type="submit">
+                           <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <ul class="navbar-nav flex-row">
+                         <li class="nav-item me-2">
+                            <a class="nav-link icon-link" href="account.html" title="Account">
+                                <i class="fas fa-user fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link icon-link" href="cart.html" title="Cart">
+                                <i class="fas fa-shopping-cart fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-12 mb-3">
+                 <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Categories</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Clothing</li>
+                  </ol>
+                </nav>
+                <h1 class="display-5">Clothing</h1>
+                <p class="text-muted">Discover the latest trends in fashion for men, women, and kids.</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <aside class="col-lg-3 mb-4">
+                <div class="filter-sidebar sticky-lg-top" style="top: 80px;">
+                    <h4 class="mb-3">Filters</h4>
+
+                    <div class="accordion" id="filterAccordion">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingType">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseType" aria-expanded="true" aria-controls="collapseType">
+                                    Clothing Type
+                                </button>
+                            </h2>
+                            <div id="collapseType" class="accordion-collapse collapse show" aria-labelledby="headingType" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="typeTshirts"><label class="form-check-label" for="typeTshirts">T-Shirts & Tops</label></div>
+                                    <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="typeJeans"><label class="form-check-label" for="typeJeans">Jeans & Trousers</label></div>
+                                    <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="typeDresses"><label class="form-check-label" for="typeDresses">Dresses & Skirts</label></div>
+                                    <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="typeOuterwear"><label class="form-check-label" for="typeOuterwear">Outerwear</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="typeShoes"><label class="form-check-label" for="typeShoes">Shoes</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSize">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSize" aria-expanded="false" aria-controls="collapseSize">
+                                    Size
+                                </button>
+                            </h2>
+                            <div id="collapseSize" class="accordion-collapse collapse" aria-labelledby="headingSize" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sizeXS"><label class="form-check-label" for="sizeXS">XS</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sizeS"><label class="form-check-label" for="sizeS">S</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sizeM"><label class="form-check-label" for="sizeM">M</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sizeL"><label class="form-check-label" for="sizeL">L</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sizeXL"><label class="form-check-label" for="sizeXL">XL</label></div>
+                                    <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="sizeXXL"><label class="form-check-label" for="sizeXXL">XXL</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                             <h2 class="accordion-header" id="headingColor">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseColor" aria-expanded="false" aria-controls="collapseColor">
+                                    Color
+                                </button>
+                            </h2>
+                            <div id="collapseColor" class="accordion-collapse collapse" aria-labelledby="headingColor" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="colorRed">
+                                        <label class="form-check-label" for="colorRed">
+                                            <span class="color-swatch swatch-red"></span> Red
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="colorBlue">
+                                        <label class="form-check-label" for="colorBlue">
+                                             <span class="color-swatch swatch-blue"></span> Blue
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="colorGreen">
+                                        <label class="form-check-label" for="colorGreen">
+                                             <span class="color-swatch swatch-green"></span> Green
+                                        </label>
+                                    </div>
+                                     <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="colorBlack">
+                                        <label class="form-check-label" for="colorBlack">
+                                             <span class="color-swatch swatch-black"></span> Black
+                                        </label>
+                                    </div>
+                                     <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="colorWhite">
+                                        <label class="form-check-label" for="colorWhite">
+                                             <span class="color-swatch swatch-white"></span> White
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingBrand">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
+                                    Brand
+                                </button>
+                            </h2>
+                            <div id="collapseBrand" class="accordion-collapse collapse" aria-labelledby="headingBrand" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                     <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="brandChicStyle"><label class="form-check-label" for="brandChicStyle">ChicStyle</label></div>
+                                     <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="brandUrbanWear"><label class="form-check-label" for="brandUrbanWear">UrbanWear</label></div>
+                                     <div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="brandClassicFit"><label class="form-check-label" for="brandClassicFit">ClassicFit</label></div>
+                                     <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="brandOutdoorGear"><label class="form-check-label" for="brandOutdoorGear">OutdoorGear</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPrice">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="false" aria-controls="collapsePrice">
+                                    Price Range
+                                </button>
+                            </h2>
+                            <div id="collapsePrice" class="accordion-collapse collapse" aria-labelledby="headingPrice" data-bs-parent="#filterAccordion">
+                                <div class="accordion-body">
+                                    <label for="priceRange" class="form-label">Max Price: $<span id="priceValue">100</span></label>
+                                    <input type="range" class="form-range" min="10" max="500" step="5" id="priceRange" value="100" oninput="document.getElementById('priceValue').textContent = this.value">
+                                     <div class="d-flex justify-content-between mt-1 small text-muted">
+                                        <span>$10</span>
+                                        <span>$500+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                     <div class="d-grid gap-2 mt-4">
+                         <button class="btn btn-primary" type="button">Apply Filters</button>
+                         <button class="btn btn-outline-secondary" type="button">Clear Filters</button>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Showing 1-12 of 78 results</span>
+                    <div class="col-auto">
+                        <select class="form-select form-select-sm" aria-label="Sort products">
+                            <option selected>Sort by relevance</option>
+                            <option value="1">Price: Low to High</option>
+                            <option value="2">Price: High to Low</option>
+                            <option value="3">Newest Arrivals</option>
+                            <option value="4">Best Sellers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card border-0">
+                            <img src="14.avif" class="card-img-top" alt="T-Shirt">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6">UrbanWear Graphic Tee</h5>
+                                <p class="card-text small text-muted flex-grow-1">Soft cotton graphic print t-shirt.</p>
+                                <p class="card-text fw-bold mb-2">$29.99</p>
+                                <a href="#" class="btn btn-primary btn-sm mt-auto w-100">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card border-0">
+                            <img src="15.jpg" class="card-img-top" alt="Jeans">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6">ClassicFit Slim Jeans</h5>
+                                <p class="card-text small text-muted flex-grow-1">Comfortable stretch denim in a slim fit.</p>
+                                <p class="card-text fw-bold mb-2">$59.50</p>
+                                <a href="#" class="btn btn-primary btn-sm mt-auto w-100">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card border-0">
+                             <span class="badge bg-success position-absolute top-0 end-0 m-2">New Arrival</span>
+                            <img src="16.jpg" class="card-img-top" alt="Dress">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6">ChicStyle Floral Dress</h5>
+                                <p class="card-text small text-muted flex-grow-1">Lightweight summer dress with floral pattern.</p>
+                                <p class="card-text fw-bold mb-2">$75.00</p>
+                                <a href="#" class="btn btn-primary btn-sm mt-auto w-100">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card border-0">
+                            <img src="17.avif" class="card-img-top" alt="Jacket">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6">OutdoorGear Windbreaker</h5>
+                                <p class="card-text small text-muted flex-grow-1">Water-resistant jacket for unpredictable weather.</p>
+                                <p class="card-text fw-bold mb-2">$89.95</p>
+                                <a href="#" class="btn btn-primary btn-sm mt-auto w-100">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col">
+                        <div class="card h-100 shadow-sm product-card border-0">
+                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">Sale</span>
+                            <img src="18.jpg" class="card-img-top" alt="Hoodie">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6">UrbanWear Pullover Hoodie</h5>
+                                <p class="card-text small text-muted flex-grow-1">Cozy fleece-lined pullover hoodie.</p>
+                                <p class="card-text mb-2"><span class="text-decoration-line-through text-muted me-1">$55.00</span> <span class="fw-bold text-danger">$44.99</span></p>
+                                <a href="#" class="btn btn-primary btn-sm mt-auto w-100">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm product-card border-0">
+                            <img src="19.avif" class="card-img-top" alt="Sneakers">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fs-6">ClassicFit Canvas Sneakers</h5>
+                                <p class="card-text small text-muted flex-grow-1">Versatile and comfortable everyday sneakers.</p>
+                                <p class="card-text fw-bold mb-2">$65.00</p>
+                                <a href="#" class="btn btn-primary btn-sm mt-auto w-100">
+                                    <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <nav aria-label="Page navigation" class="mt-5 d-flex justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+
+            </section>
+        </div>
+    </main>
+
+    <footer id="alternative-footer" class="mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Store Info & Key Links -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">JS MART</h5>
+                    <p class="footer-text small">Your source for unique finds and curated collections.</p>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Newsletter Signup -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Stay Updated</h5>
+                    <p class="footer-text small">Subscribe to our newsletter for exclusive deals and product updates.</p>
+                    <form id="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-sm" placeholder="Enter your email" aria-label="Email Address" required>
+                            <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-text small newsletter-form-text mt-2">We respect your privacy.</div>
+                    </form>
+                </div>
+
+                <!-- Column 3: Social Media -->
+                <div class="col-lg-4 col-md-12 text-lg-end text-md-center mt-md-3 mt-lg-0"> <!-- Adjust alignment & margin for smaller screens -->
+                    <h5 class="footer-heading">Connect With Us</h5>
+                    <p class="footer-text small d-none d-lg-block">Follow us on social media:</p> <!-- Hide on smaller screens if crowded -->
+                    <div class="social-icons mt-2">
+                        <a href="#" class="social-icon me-2" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="social-icon me-2" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="social-icon me-2" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider"> <!-- Custom class for divider -->
+
+            <div class="row align-items-center"> <!-- align-items-center for vertical alignment -->
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                     <p class="footer-copyright mb-0">© 2025 JS MART Alternative. All Rights Reserved.</p>
+                </div>
+                 <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="footer-policy-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-policy-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
